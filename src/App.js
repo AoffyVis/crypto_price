@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import CryptoTracker from "./Pages/CryptoTracker";
+import { Routes, Route } from "react-router-dom";
+import PageAbout from "./Pages/PageAbout";
+import Coin from "./Pages/Coin";
+import PageError from "./Pages/PageError";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
+    >
+      <Routes>
+        <Route path="/" element={<CryptoTracker />}>
+          {/* <CryptoTracker /> */}
+        </Route>
+        <Route path="/about" element={<PageAbout />} />
+        <Route path="/coin/:coinID" element={<Coin />} />
+        <Route path="*" element={<PageError />} />
+      </Routes>
+      {/* <CryptoTracker /> */}
     </div>
   );
 }
