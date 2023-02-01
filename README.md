@@ -7,6 +7,15 @@ API : https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=marke
 
 API by Param : https://api.coingecko.com/api/v3/coins/${coinID}
 
+start new terminal in VS_Code
+cd to your project directory
+
+initial project with
+
+### `npm install`
+
+in your project directory
+
 In the project directory, you can run:
 
 ### `npm start`
